@@ -16,3 +16,5 @@ Result: A DLL explicitly denied by AppLocker can return `ALLOWED`.
 - `C:\Windows\System32\ntdll.dll` -> Copied to `poc.dll` in the temp folder. This is the DLL that is explicitly **denied** by your AppLocker rule.
 
 The race tricks the driver into checking the allowed DLL (`kernel32.dll`) instead of your denied DLL (`poc.dll`).
+
+Race: 31 allowed / 2495 denied / 2474 error (5000 iterations)
